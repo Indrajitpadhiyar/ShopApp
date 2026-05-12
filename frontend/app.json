@@ -1,10 +1,12 @@
 {
   "expo": {
     "name": "LuckyElectrical",
-    "slug": "lucky-electrical",
+    "slug": "hello",
     "version": "1.0.1",
     "orientation": "portrait",
+
     "icon": "./assets/images/LEH_Logo.png",
+
     "scheme": "lucky-electrical",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -19,10 +21,8 @@
       "versionCode": 2,
 
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "foregroundImage": "./assets/images/LEH_Logo.png",
+        "backgroundColor": "#ffffff"
       },
 
       "edgeToEdgeEnabled": true,
@@ -68,6 +68,8 @@
 
     "updates": {
       "fallbackToCacheTimeout": 0
-    }
+    },
+
+    "owner": "indrajitpadhiyar"
   }
 }
