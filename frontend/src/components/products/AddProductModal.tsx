@@ -49,8 +49,18 @@ export function AddProductModal({ visible, onClose }: Props) {
       reset();
       onClose();
     } catch (e: any) {
-      const msg = e?.data?.error?.message || e?.error || "Failed to save product";
-      Alert.alert("Save failed", String(msg));
+      const raw = e?.data?.error?.message || e?.error || e?.message || "Failed to save product";
+      const msg = String(raw);
+      const isNetwork =
+        msg.includes("Network request failed") ||
+        msg.includes("Failed to fetch") ||
+        msg.includes("TypeError");
+      Alert.alert(
+        "Save failed",
+        isNetwork
+          ? "Could not reach the server. On a phone, localhost does not work—use a deployed API URL (see app extra.apiUrl / EXPO_PUBLIC_API_URL) and rebuild the app."
+          : msg,
+      );
     }
   }
 

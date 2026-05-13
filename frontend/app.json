@@ -57,6 +57,7 @@
 
     "extra": {
       "router": {},
+      "apiUrl": "https://shopapp-i1zp.onrender.com/api",
       "eas": {
         "projectId": "62fd9479-5d57-4cbf-8d09-8fdb2c9c4f60"
       }
